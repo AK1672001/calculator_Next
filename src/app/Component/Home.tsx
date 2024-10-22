@@ -4,15 +4,15 @@ import React, { useState } from 'react'
 
 const Home = () => {
   const [valueinput,setValueInput]=useState<string>("")
-  const handlechange=(e:any)=>{
+  const handlechange = (e: React.ChangeEvent<HTMLInputElement>) => {
     e.preventDefault();
     setValueInput(e.target.value);
-    
-}
-const handleClick=(a:any)=>{
-   setValueInput(valueinput+a);
-
-}
+  }
+  
+  const handleClick = (a: string | number) => {
+    setValueInput(valueinput + a);
+  }
+  
 const handlebutton=()=>{
  
   const add=eval(valueinput).toString();
